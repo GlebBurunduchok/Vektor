@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const en = {
-    skip:'Skip to content', navigation:'Main navigation', navFeatures:'Features', navScreens:'Interface', navInstall:'How to install', navDownload:'Download',
+    privacyLink:'Privacy Policy', termsLink:'Terms of Use', creditsLink:'Sources and licences', skip:'Skip to content', navigation:'Main navigation', navFeatures:'Features', navScreens:'Interface', navInstall:'How to install', navDownload:'Download',
     earlyAccess:'Ready for your first trips', heroLine1:'Your journey.', heroLine2:'Your direction.',
     heroLead:'Less clutter on your screen. More focus on the road. Vektor helps you find a place, plan your route and see the next turn.',
     downloadFor:'Download for', comingSoon:'Coming soon for', iphoneSoon:'iPhone — coming soon', releaseNote:'· test version · Android 8.0+', installHelp:'Installing an APK for the first time?',
@@ -19,9 +19,9 @@
     step3Title:'Grant access', step3Text:'Allow precise location while using the app. Enable notifications to see turns on your lock screen.', step4Title:'Choose your direction', step4Text:'Find an address, check the route and tap “Start navigation”. Go outdoors for your first GPS test.',
     downloadApk:'Download APK', installNote:'Android 8.0+ · Maps, search and route recalculation require an internet connection.',
     nextLabel:'MORE AHEAD', nextTitle:'Vektor grows<br>with every journey.', nextLead:'This is the first test version. We are gradually improving guidance and adding things that help on the road.',
-    next1:'Reports from other drivers', next2:'Voice guidance', next3:'Better guidance with weak GPS', planned:'Planned', research:'Researching', forIphone:'for iPhone', soon:'Coming soon',
+    next1:'Reports from other drivers', next2:'Better address and footpath coverage', next3:'Better guidance with weak GPS', planned:'Planned', research:'Researching', forIphone:'for iPhone', soon:'Coming soon',
     faqLabel:'BEFORE YOU GO', faqTitle:'Questions?<br>Here are the answers.',
-    faq1q:'Does Vektor already work without GPS?', faq1a:'Not yet. The current version uses location supplied by Android: GPS or network sources. Vektor tells you when accuracy is insufficient. Sensor-based navigation without GPS is still in development and is not included in this version.',
+    faq1q:'Does Vektor already work without GPS?', faq1a:'Primary guidance uses Android location: GPS or network sources. Vektor tells you when accuracy is insufficient. The new test build also estimates motion from sensors using a known or manually chosen position. Error accumulates; this does not guarantee accurate guidance or protection against jamming.',
     faq2q:'Do I need an internet connection?', faq2a:'Yes. The current version needs the internet to load maps, search for addresses, and plan or recalculate routes. Full offline maps have not been added yet.',
     faq3q:'What if I take a wrong turn?', faq3a:'With an internet connection, Vektor automatically requests a new route after a confirmed deviation. It needs several fresh, accurate location fixes so ordinary GPS error does not trigger unnecessary recalculations.',
     faq4q:'Can I see turns when my screen is locked?', faq4a:'During an active trip, Vektor shows the next turn, distance and street in an ongoing notification. Allow notifications and enable their content on the lock screen in your phone settings.',
@@ -61,6 +61,7 @@
   function setLanguage(next, remember=true) {
     language=next==='en'?'en':'uk';
     document.documentElement.lang=language;
+    document.querySelectorAll('[data-legal]').forEach(link=>link.href=`${link.dataset.legal}-${language}.html`);
     nodes.forEach(node=>{
       const original=originals.get(node);
       if(node.dataset.i18n) node.innerHTML=language==='en'?(en[node.dataset.i18n]??original.html):original.html;
