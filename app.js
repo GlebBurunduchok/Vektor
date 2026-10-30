@@ -4,8 +4,8 @@
     privacyLink:'Privacy Policy', termsLink:'Terms of Use', creditsLink:'Sources and licences', skip:'Skip to content', navigation:'Main navigation', navFeatures:'Features', navScreens:'Interface', navInstall:'How to install', navDownload:'Download',
     earlyAccess:'Ready for your first trips', heroLine1:'Your journey.', heroLine2:'Your direction.',
     heroLead:'Less clutter on your screen. More focus on the road. Vektor helps you find a place, plan your route and see the next turn.',
-    downloadFor:'Download for', comingSoon:'Coming soon for', iphoneSoon:'iPhone — coming soon', releaseNote:'· test version · Android 8.0+', installHelp:'Installing an APK for the first time?',
-    orbitLabel:'Start from where you are', homeAlt:'Vektor home screen with a map of Kyiv and address search', floatingTitle:'A familiar road. A fresh perspective.', floatingText:'By car or on foot', realScreenshot:'Actual screen from the test version',
+    downloadFor:'Download for', comingSoon:'Coming soon for', iphoneSoon:'iPhone — coming soon', releaseNote:'· Android · Android 8.0+', installHelp:'Installing an APK for the first time?',
+    orbitLabel:'Start from where you are', homeAlt:'Vektor home screen with a map of Kyiv and address search', floatingTitle:'A familiar road. A fresh perspective.', floatingText:'By car or on foot', realScreenshot:'Actual screen from the Android',
     strip1:'No account needed', strip2:'Ukrainian & English', strip3:'Made for the road',
     featuresLabel:'01 / HERE FOR THE EVERYDAY', featuresTitle:'What matters, in plain sight.', featuresLead:'From “Where to?” to your next turn. Get going without learning a complicated app.',
     feature1Title:'A route that keeps you going', feature1Text:'Turns, distance and the street name on one screen. Left the route? Vektor requests a new one when your location is accurate enough.', feature1Foot:'Driving & walking',
@@ -16,19 +16,19 @@
     reportsNote:'Reports are currently stored on your phone. Sharing reports with other drivers is planned.', screenHomeCaption:'Open. Find. Go.', screenNightCaption:'Your route, in a different light.', screenReportsCaption:'See something? Mark it on the map.',
     installLabel:'03 / BE ONE OF THE FIRST', installTitle:'A few steps.<br>Then you’re on your way.', installLead:'For now, Vektor is installed using an APK file. The app is free and there is no account to create.',
     step1Title:'Download the APK', step1Text:'Tap “Download for Android” on this website. Wait for the download to finish.', step2Title:'Open the file', step2Text:'Open Vektor.apk from your downloads. If Android asks, allow this browser to install apps.',
-    step3Title:'Grant access', step3Text:'Allow precise location while using the app. Enable notifications to see turns on your lock screen.', step4Title:'Choose your direction', step4Text:'Find an address, check the route and tap “Start navigation”. Go outdoors for your first GPS test.',
+    step3Title:'Grant access', step3Text:'Allow precise location while using the app. Enable notifications to see turns on your lock screen.', step4Title:'Choose your direction', step4Text:'Find an address, check the route and tap “Start navigation”. Go outdoors for your first position fix.',
     downloadApk:'Download APK', installNote:'Android 8.0+ · Maps, search and route recalculation require an internet connection.',
-    nextLabel:'MORE AHEAD', nextTitle:'Vektor grows<br>with every journey.', nextLead:'This is the first test version. We are gradually improving guidance and adding things that help on the road.',
+    nextLabel:'MORE AHEAD', nextTitle:'Vektor grows<br>with every journey.', nextLead:'Vektor is growing with your feedback. We are gradually improving guidance and adding things that help on the road.',
     next1:'Reports from other drivers', next2:'Better address and footpath coverage', next3:'Better guidance with weak GPS', planned:'Planned', research:'Researching', forIphone:'for iPhone', soon:'Coming soon',
     faqLabel:'BEFORE YOU GO', faqTitle:'Questions?<br>Here are the answers.',
-    faq1q:'Does Vektor already work without GPS?', faq1a:'Primary guidance uses Android location: GPS or network sources. Vektor tells you when accuracy is insufficient. The new test build also estimates motion from sensors using a known or manually chosen position. Error accumulates; this does not guarantee accurate guidance or protection against jamming.',
+    faq1q:'Does Vektor already work without GPS?', faq1a:'Without a fresh GPS fix, Vektor estimates motion from a known or manually set position. Uncertainty increases; correct your position when needed.',
     faq2q:'Do I need an internet connection?', faq2a:'Yes. The current version needs the internet to load maps, search for addresses, and plan or recalculate routes. Full offline maps have not been added yet.',
     faq3q:'What if I take a wrong turn?', faq3a:'With an internet connection, Vektor automatically requests a new route after a confirmed deviation. It needs several fresh, accurate location fixes so ordinary GPS error does not trigger unnecessary recalculations.',
     faq4q:'Can I see turns when my screen is locked?', faq4a:'During an active trip, Vektor shows the next turn, distance and street in an ongoing notification. Allow notifications and enable their content on the lock screen in your phone settings.',
     faq5q:'Can other drivers see my reports?', faq5a:'Reports are local for now: they are only visible on the phone where they were created. Sharing between drivers and alerts about events ahead are planned separately.',
-    faq6q:'What happens to my data?', faq6a:'This website uses no analytics, advertising trackers or sign-up forms. Your language preference is saved only in your browser. Saved places and app reports stay on your phone; coordinates and queries needed for maps, search and routes are sent to the respective mapping services. GitHub, as the host, may keep technical request logs.',
+    faq6q:'What happens to my data?', faq6a:'This website uses no analytics, advertising trackers or sign-up forms. Your language preference is saved only in your browser. Saved places and app reports stay on your phone; coordinates and queries needed for maps, search and routes are sent to the respective mapping services. Netlify and GitHub may keep technical request logs.',
     faq7q:'When will the iPhone version arrive?', faq7a:'An iPhone version is planned. There is no release date yet. An installation link will appear here when it is ready.',
-    downloadLabel:'SEE YOU ON THE ROAD', downloadTitle:'Your next journey<br>starts here.', downloadLead:'Try the first version of Vektor for Android.', downloadAndroid:'Download for Android', beta:'test version',
+    downloadLabel:'SEE YOU ON THE ROAD', downloadTitle:'Your next journey<br>starts here.', downloadLead:'Try the first version of Vektor for Android.', downloadAndroid:'Download for Android', beta:'Android',
     footerMotto:'Keep your direction.', footerQuestions:'Questions & answers ↗', safety:'Vektor is a navigation aid. Follow road signs and actual traffic conditions. Set up routes and add reports only after stopping safely.'
   };
   const nodes = [...document.querySelectorAll('[data-i18n], [data-i18n-alt], [data-i18n-aria]')];
@@ -38,6 +38,7 @@
     night:{src:'assets/night.webp', caption:'screenNightCaption', uk:'Твій маршрут в іншому світлі.', alt:{uk:'Темна тема Vektor з побудованим маршрутом', en:'Vektor dark theme with a planned route'}},
     reports:{src:'assets/reports.webp', caption:'screenReportsCaption', uk:'Побачив? Познач на карті.', alt:{uk:'Вибір дорожньої події у Vektor', en:'Selecting a road report in Vektor'}}
   };
+  Object.assign(en,{"screensLabel": "02 / YOUR ROUTE, YOUR CHOICE", "screensTitle": "Choose your way.<br>Keep moving.", "routeChoiceTitle": "Options before you start", "routeChoiceText": "Compare available routes by time and distance. Your chosen route is highlighted on the map.", "inTripTitle": "Change route on the go", "inTripText": "Open the trip menu to choose an available route from your current position.", "voiceTitle": "Hear the next turn", "voiceText": "Ukrainian voice guidance, volume and vibration controls in Settings.", "supportNav": "Support", "supportTitle": "Help Vektor get better.", "supportText": "Financial support is coming later. For now, help by reporting map, address or route issues.", "reportLink": "Report an issue ↗", "nextLead": "Vektor keeps improving with your feedback. Help us find and correct issues along the way.", "next1": "Live traffic and arrival times", "next2": "Downloadable regional maps", "beta": "Android", "releaseNote": "· Android 8.0+", "heroScreenNote": "VEKTOR INTERFACE"});
   let language='uk';
   let selectedScreen='home';
   function updateScreen(key, focus=false) {
@@ -52,6 +53,7 @@
       if(selected && focus) button.focus();
     });
     const image=document.getElementById('screen-image');
+    if(!image) return;
     image.src=screen.src;
     image.alt=screen.alt[language];
     const caption=document.getElementById('screen-caption');
@@ -70,7 +72,7 @@
     });
     document.querySelectorAll('[data-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===language)));
     document.title=language==='en'?'Vektor — your direction':'Vektor — твій напрямок';
-    document.querySelector('meta[name="description"]').content=language==='en'?'Vektor for Android. Routes, clear turns, light and dark maps. Download the APK test version. iPhone coming soon.':'Vektor — навігатор для Android. Маршрути, зрозумілі повороти, світла й темна карта. Завантажте тестову версію APK. iPhone — скоро.';
+    document.querySelector('meta[name="description"]').content=language==='en'?'Vektor for Android. Routes, clear turns, light and dark maps. Download the APK Android. iPhone coming soon.':'Vektor — навігатор для Android. Маршрути, зрозумілі повороти, світла й темна карта. Завантажте Vektor APK. iPhone — скоро.';
     updateScreen(selectedScreen);
     if(remember) {
       try {localStorage.setItem('vektor-language',language);} catch {}
